@@ -1,0 +1,42 @@
+.navbar-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: rgba(20, 20, 20, 0.123);
+  padding: 1em;
+  font-weight: 400;
+  gap: 1em;
+  border-bottom: 1px solid #f3f3f3;
+  .brand {
+    display: flex;
+    img {
+      width: 8rem;
+    }
+  }
+}
+
+.categorias {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 1.2em;
+  gap: 1em;
+  .nav-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    list-style: none;
+    color: rgb(17, 17, 17);
+  }
+}
+
+.cartwidget {
+    display: flex;
+    align-items: center;
+    gap: 0.2em;
+    font-size: 1.2em;
+  }
+
+
