@@ -1,18 +1,22 @@
 import "./Navbar.css";
 import { CartWidget } from "./CartWidget";
+import { Link } from "react-router-dom";
 
 const NavBar = () => {
   return (
     <nav className="navbar-container">
-      <div className="brand">
+
+      <Link to="/" className="brand">
         <img src="https://i.ibb.co/2qSTjgf/mapatech-2.webp" alt="Logo" />
-      </div>
+      </Link>
+
       <ul className="categorias">
-        <li className="nav-item">Notebooks</li>
-        <li className="nav-item">PC Armada</li>
-        <li className="nav-item">Componentes</li>
-        <li className="nav-item">Perifericos</li>
+        <Link to="/category/notebooks" className="nav-item">Notebooks</Link>
+        <Link to="/category/pc" className="nav-item">PC Armada</Link>
+        <Link to="/category/componentes" className="nav-item">Componentes</Link>
+        <Link to="/category/perifericos" className="nav-item">Perifericos</Link>
       </ul>
+      
       <CartWidget />
     </nav>
   );

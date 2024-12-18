@@ -3,7 +3,7 @@
   display: flex;
   align-items: center;
   justify-content: space-around;
-  background-color: rgba(20, 20, 20, 0.123);
+  background-color: rgb(255, 188, 87);
   padding: 1em;
   font-weight: 400;
   gap: 1em;
@@ -24,11 +24,15 @@
   font-size: 1.2em;
   gap: 1em;
   .nav-item {
+    text-decoration: none;
     display: flex;
     align-items: center;
     justify-content: space-around;
     list-style: none;
     color: rgb(17, 17, 17);
+  }
+  .nav-item:hover {
+    text-decoration: underline;
   }
 }
 
