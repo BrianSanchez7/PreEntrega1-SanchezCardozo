@@ -4,25 +4,26 @@ import ItemListContainer from './components/ItemListContainer/ItemListContainer'
 import NavBar from './components/NavBar/NavBar'
 import '@fontsource-variable/league-spartan';
 import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
-import Loading from './components/Loading/Loading';
+import { CartProvider } from './context/CartContext'; 
+import Cart from './components/Cart/Cart';
 
 function App() {
   
   return (
     <div>
-        <BrowserRouter>
+      <BrowserRouter>
+        <CartProvider>
         <NavBar />
 
         <Routes>
           <Route path="/" element={<ItemListContainer saludo={"Bienvenidos a MapaTech"} />}/>
           <Route path="/category/:idCategory" element={<ItemListContainer saludo={"Bienvenidos a MapaTech"} />}/>
           <Route path="/item/:idProduct" element={<ItemDetailContainer />} />
-          
+          <Route path="/cart" element={<Cart/>} />
           <Route path="*" element={<ItemListContainer saludo={"Bienvenidos a MapaTech"} />}/>
         </Routes>
-        
-
-        </BrowserRouter>
+        </CartProvider>
+      </BrowserRouter>
     </div>
     
   )
