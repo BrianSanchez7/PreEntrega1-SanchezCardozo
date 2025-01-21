@@ -1,0 +1,32 @@
+.checkout-container > h2{
+    margin-top: 0.6em;
+    padding: 10px;
+    text-align: center;
+}
+
+.form-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5em;
+    padding: 1em;
+}
+
+.form-container > input{
+    width: 25em;
+}
+
+.form-container > button{
+    margin-top: 0.5em;
+    padding: 10px;
+}
+
+.success-checkout-container{
+    margin-top: 40vh;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    justify-content: center;
+    align-items: center;
+}

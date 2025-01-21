@@ -29,7 +29,7 @@ const Cart = () => {
                 <p>Cantidad: {productCart.quantity}</p>
                 <p>Precio Unitario: ${productCart.price}</p>
                 <button
-                  className="button-cart"
+                  className="button-delete"
                   onClick={() => deleteProductById(productCart.id)}
                 >
                   <MdOutlineDeleteForever className="trash-icon" />
@@ -40,7 +40,8 @@ const Cart = () => {
       </ul>
       <div className="finish-buy-container">
         <h2>Precio Total: ${totalPrice()}</h2>
-        <button className="button-detail" onClick={deleteCart}>
+        <Link to ="/checkout" className="button-cart">Finalizar Compra</Link>
+        <button className="button-cart" onClick={deleteCart}>
           Vaciar Carrito
         </button>
       </div>

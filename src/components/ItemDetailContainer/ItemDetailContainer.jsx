@@ -16,7 +16,6 @@ const ItemDetailContainer = () => {
       setLoading(true)
       const docRef = doc(db, "products", idProduct)
       const dataDb= await getDoc(docRef)
-
       const data = { id: dataDb.id , ...dataDb.data()}
       setProduct(data)
     } catch (error) { 
@@ -32,11 +31,9 @@ const ItemDetailContainer = () => {
   }, [idProduct])
 
   return (
-
-    
+  
       loading === true ? <Loading /> : <ItemDetail product={product} />
-    
-    
+        
   )
 }
 export default ItemDetailContainer
