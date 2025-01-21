@@ -29,6 +29,7 @@
 
 .text-price{
     padding: 10px 0;
+    margin-bottom: 10px;
     font-size: 1.4rem;
     color: rgb(29, 29, 29); 
 }

@@ -20,6 +20,7 @@ function App() {
           <Route path="/category/:idCategory" element={<ItemListContainer saludo={"Bienvenidos a MapaTech"} />}/>
           <Route path="/item/:idProduct" element={<ItemDetailContainer />} />
           <Route path="/cart" element={<Cart/>} />
+
           <Route path="*" element={<ItemListContainer saludo={"Bienvenidos a MapaTech"} />}/>
         </Routes>
         </CartProvider>

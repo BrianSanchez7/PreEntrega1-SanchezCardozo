@@ -55,6 +55,7 @@
     margin-bottom: 1.3em;
     margin-top: 0.8em;
     transition: 0.15s ease-in;
+    cursor: pointer;
 }
 
 .button-detail:hover{
