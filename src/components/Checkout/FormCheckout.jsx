@@ -1,3 +1,4 @@
+import "./checkout.css"
 
 const FormCheckout = ({dataForm, handleChangeInput, handleSubmitForm}) => {
   return (
@@ -8,6 +9,7 @@ const FormCheckout = ({dataForm, handleChangeInput, handleSubmitForm}) => {
           value={dataForm.fullname}
           name="fullname"
           onChange={handleChangeInput}
+          placeholder="Ingrese su nombre completo"
         />
 
         <label>Teléfono</label>
@@ -16,6 +18,7 @@ const FormCheckout = ({dataForm, handleChangeInput, handleSubmitForm}) => {
           value={dataForm.phone}
           name="phone"
           onChange={handleChangeInput}
+          placeholder="Ingrese su teléfono celular"
         />
 
         <label>Email</label>
@@ -24,9 +27,10 @@ const FormCheckout = ({dataForm, handleChangeInput, handleSubmitForm}) => {
           value={dataForm.email}
           name="email"
           onChange={handleChangeInput}
+          placeholder="Ingrese su correo electronico"
         />
 
-        <button type="submit">Enviar Orden</button>
+        <button type="submit" className="order-button">Enviar Orden</button>
       </form>
   )
 }

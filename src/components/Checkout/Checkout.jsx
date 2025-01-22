@@ -46,7 +46,7 @@ const Checkout = () => {
   return (
     orderId ? <SuccessCheckout orderId={orderId}/> :
     <div className="checkout-container">
-      <h2>Ingrese los datos para finalizar su compra</h2>
+      <h1>Ingrese los datos para finalizar su compra</h1>
       <FormCheckout 
       dataForm={dataForm}
       handleChangeInput={handleChangeInput}

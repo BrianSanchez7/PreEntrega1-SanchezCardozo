@@ -40,7 +40,12 @@ const CartProvider = ({ children }) => {
 
     const totalPrice = () => {
         const price = cart.reduce ((total, productCart) => total + (productCart.quantity * productCart.price), 0)
-        return price
+        const formatedPrice = new Intl.NumberFormat('es-AR', {
+            style: 'currency',
+            currency: 'ARS',
+            maximumSignificantDigits: 3,
+        })
+        return formatedPrice.format(price)
     }
 
     const deleteCart = () =>{

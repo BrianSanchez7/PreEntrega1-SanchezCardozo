@@ -8,14 +8,15 @@
 }
 
 .cart-detail{
-    padding: 0 1em 0 0 ;
+    padding: 1em ;
     margin-bottom: 1em;
-    background-color: rgba(12, 63, 65, 0.096);
+    background-color: rgba(86, 233, 238, 0.096);
     display: flex;
     flex-direction: row;
+    justify-content: center;
     gap: 1em;
     border: 1px solid rgb(211, 211, 211);
-    border-radius: 50px;
+    border-radius: 30px;
     overflow: hidden;
 }
 
@@ -23,9 +24,12 @@
     list-style: none;
 }
 
+.cart-item > img{
+    border-radius:30px
+}
+
 .cart-item{
     display: flex;
-    justify-content: center;
     align-items: center;
     flex-direction: row;
     gap: 1em;
@@ -33,7 +37,7 @@
 
 .finish-buy-container{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     padding-top: 1em;
@@ -45,7 +49,7 @@
 }
 
 .button-delete{
-    background-color: rgb(255, 132, 116);
+    background-color: rgb(255, 100, 100);
     color: rgb(30, 31, 31);
     margin: 10px 0 0 0;
     padding: 0.5em;
@@ -60,7 +64,7 @@
 
 .button-delete:hover{
     background-color: rgb(54, 54, 54);
-    color: rgb(255, 82, 82);
+    color: rgb(255, 100, 100);
     border: 1.1px solid rgb(189, 189, 189);
 }
 
@@ -78,20 +82,40 @@
 }
 
 .button-cart{
-    background-color: rgb(255, 200, 116);
     color: rgb(30, 31, 31);
     padding: 10px;
+    margin: 5px;
     border-radius: 5px;
     border: 1px solid #8d8d8d;
     text-decoration: none;
     transition: 0.15s ease-in;
     cursor: pointer;
     text-align: center;
-    text-: 50px;
+    font-size: 1em;
 }
 
 .button-cart:hover{
-    background-color: rgb(19, 19, 19);
+    background-color: rgb(0, 0, 0);
     color: rgb(255, 200, 116);
     border: 1.1px solid rgb(255, 200, 116);
+}
+
+.finish{
+    background-color: rgb(94, 201, 117);
+}
+
+.finish:hover{
+    color: rgb(94, 201, 117);
+    border: 1.1px solid rgb(94, 201, 117);
+    border-radius: 5px;
+}
+
+.delete{
+    background-color: rgb(255, 100, 100);
+}
+
+.delete:hover{
+    color: rgb(255, 100, 100);
+    border: 1.1px solid rgb(255, 100, 100);
+    border-radius: 5px;
 }

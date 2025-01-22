@@ -8,6 +8,12 @@ const Cart = () => {
   const { cart, totalPrice, deleteProductById, deleteCart } =
     useContext(CartContext);
 
+    const formatedPrice = new Intl.NumberFormat('es-AR', {
+      style: 'currency',
+      currency: 'ARS',
+      maximumSignificantDigits: 3,
+    })
+
   //Early Return en caso de no tener items en el carrito
   if (cart.length === 0) {
     return (
@@ -27,7 +33,7 @@ const Cart = () => {
                 <img src={productCart.image} width={150} alt="" />
                 <p>{productCart.name}</p>
                 <p>Cantidad: {productCart.quantity}</p>
-                <p>Precio Unitario: ${productCart.price}</p>
+                <p>Precio Unitario: {formatedPrice.format(productCart.price)}</p>
                 <button
                   className="button-delete"
                   onClick={() => deleteProductById(productCart.id)}
@@ -39,11 +45,13 @@ const Cart = () => {
         ))}
       </ul>
       <div className="finish-buy-container">
-        <h2>Precio Total: ${totalPrice()}</h2>
-        <Link to ="/checkout" className="button-cart">Finalizar Compra</Link>
-        <button className="button-cart" onClick={deleteCart}>
+        <h2>Precio Total: {totalPrice()}</h2>
+        <div>
+        <Link to ="/checkout" className="button-cart finish">Finalizar Compra</Link>
+        <button className="button-cart delete" onClick={deleteCart}>
           Vaciar Carrito
         </button>
+        </div>
       </div>
     </div>
   );
