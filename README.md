@@ -13,5 +13,4 @@ El proyecto consiste en una tienda desarrollada en React. Se puede ingresar a ca
 
 ## Prueba de navegabilidad
 
-![Preentrega2-SanchezCardozo](https://github.com/user-attachments/assets/e5edcaa3-27b9-4b9d-b43e-5d15bc485b2a)
-
+![Navegabilidad](https://github.com/user-attachments/assets/aec08adc-736a-4312-82e1-e5b07bfd0559)
