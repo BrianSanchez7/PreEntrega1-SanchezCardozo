@@ -5,12 +5,15 @@ import { CartContext } from "../../context/CartContext"
 import { Timestamp, collection, addDoc } from "firebase/firestore";
 import db from "../../db/db.js"
 import SuccessCheckout from "./SuccessCheckout.jsx";
+import validateForm from "../../utils/validateForm.js";
+import { toast } from "react-toastify";
 
 const Checkout = () => {
   const [dataForm, setDataForm] = useState({
     fullname: "",
     phone: "",
     email: "",
+    emailCopy: "",
   });
 
   const [orderId, setOrderId] = useState(null)
@@ -22,15 +25,27 @@ const Checkout = () => {
 
   const handleSubmitForm = async(event) => {
     event.preventDefault();
+    
     const order = {  
-        buyer: {...dataForm}, 
-        products: [...cart],
-        total: totalPrice(), 
-        date: Timestamp.fromDate(new Date ())
+      buyer: {...dataForm}, 
+      products: [...cart],
+      total: totalPrice(), 
+      date: Timestamp.fromDate(new Date ())
     }
-
-    await uploadOrder(order)
-    deleteCart()
+    
+    //Validamos el formulario con libreria "yup" 
+    if(dataForm.email === dataForm.emailCopy){
+      const validateResponse = await validateForm(dataForm)
+      if(validateResponse.status === "success"){
+        await uploadOrder(order)
+        deleteCart()
+      }else{
+        toast.error(validateResponse.message)
+      }
+    }else{
+      toast.error("Los correos electronicos no coinciden")
+    }
+    
   };
 
   const uploadOrder = async(newOrder) => {
@@ -50,7 +65,8 @@ const Checkout = () => {
       <FormCheckout 
       dataForm={dataForm}
       handleChangeInput={handleChangeInput}
-      handleSubmitForm={handleSubmitForm}/>
+      handleSubmitForm={handleSubmitForm}
+      />
     </div>
   );
 };

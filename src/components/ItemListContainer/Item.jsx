@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 
 const Item = ({ product }) => {
 
@@ -7,6 +7,7 @@ const Item = ({ product }) => {
     currency: 'ARS',
     maximumSignificantDigits: 3,
 });
+
 
 
   return (

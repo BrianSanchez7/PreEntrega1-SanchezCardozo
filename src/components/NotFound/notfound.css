@@ -1,0 +1,8 @@
+.notfound-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+    margin-top: 35vh;
+}

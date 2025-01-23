@@ -27,7 +27,15 @@ const FormCheckout = ({dataForm, handleChangeInput, handleSubmitForm}) => {
           value={dataForm.email}
           name="email"
           onChange={handleChangeInput}
-          placeholder="Ingrese su correo electronico"
+          placeholder="Ingrese su correo electrónico"
+        />
+        <label>Reingrese su Email</label>
+        <input
+          type="email"
+          value={dataForm.emailCopy}
+          name="emailCopy"
+          onChange={handleChangeInput}
+          placeholder="Reingrese su correo electrónico"
         />
 
         <button type="submit" className="order-button">Enviar Orden</button>

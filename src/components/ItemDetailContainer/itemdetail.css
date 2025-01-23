@@ -33,3 +33,9 @@
     font-size: 1.4rem;
     color: rgb(29, 29, 29); 
 }
+
+.buy-container{
+  display: flex;
+  justify-content: flex-start;
+  gap: 1em;
+}

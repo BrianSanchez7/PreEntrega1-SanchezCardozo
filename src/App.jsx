@@ -7,6 +7,7 @@ import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailCont
 import { CartProvider } from './context/CartContext'; 
 import Cart from './components/Cart/Cart';
 import Checkout from './components/Checkout/Checkout';
+import { ToastContainer } from 'react-toastify';
 
 function App() {
   
@@ -15,6 +16,7 @@ function App() {
       <BrowserRouter>
         <CartProvider>
         <NavBar />
+        <ToastContainer position="bottom-right"/>
 
         <Routes>
           <Route path="/" element={<ItemListContainer saludo={"Bienvenidos a MapaTech"} />}/>
