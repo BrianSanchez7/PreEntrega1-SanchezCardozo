@@ -50,10 +50,19 @@
     margin-top: 0.8em;
     transition: 0.15s ease-in;
     cursor: pointer;
+    font-size: 0.9em;
 }
 
 .order-button:hover{
     background-color: rgb(19, 19, 19);
     color: rgb(255, 200, 116);
     border: 1.1px solid rgb(255, 200, 116);
+}
+
+.checkout-button-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+    
 }
